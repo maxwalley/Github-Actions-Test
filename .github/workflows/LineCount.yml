@@ -14,7 +14,7 @@ jobs:
         run: sudo apt install cloc
         
       - name: Count Lines
-        run: ls
+        run: cloc Source
         
         
       
