@@ -18,7 +18,7 @@ jobs:
       - name: Checkout LineCount branch
         uses: actions/checkout@v2
         with:
-          ref: my-branc
+          ref: LineCount
         
       - name: Download and Install cloc
         run: sudo apt install cloc
