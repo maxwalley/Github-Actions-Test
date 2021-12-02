@@ -6,8 +6,16 @@ jobs:
   line-count:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        #Uses this repo: https://github.com/actions/checkout
+      - name: Merge Code into LineCount branch
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          from_branch: main
+          target_branch: LineCount
+          github_token: ${{ github.token }}
+          
+        
+      - name: Checkout LineCount branch
         uses: actions/checkout@v2
         
       - name: Download and Install cloc
