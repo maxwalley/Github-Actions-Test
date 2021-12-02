@@ -1,6 +1,9 @@
 name: Line Counter
 
-on: push
+on:
+  push:
+    branches:    
+      - main
 
 jobs:
   line-count:
