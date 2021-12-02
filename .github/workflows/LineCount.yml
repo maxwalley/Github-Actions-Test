@@ -21,4 +21,5 @@ jobs:
         with:
           message: Updated Line Count
           branch: LineCount
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       
