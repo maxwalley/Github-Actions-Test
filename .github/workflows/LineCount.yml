@@ -14,7 +14,11 @@ jobs:
         run: sudo apt install cloc
         
       - name: Count Lines
-        run: cloc Source
+        run: cloc Source --out=LineCount.txt
         
-        
+      - name: Commit and Push Changes
+        uses: actions-js/push@master
+        with:
+          message: Updated Line Count
+          branch: LineCount
       
