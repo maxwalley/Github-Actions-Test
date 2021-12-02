@@ -1,0 +1,20 @@
+name: Line Counter
+
+on: push
+
+jobs:
+  line-count:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        #Uses this repo: https://github.com/actions/checkout
+        uses: actions/checkout@v2
+        
+      - name: Download and Install cloc
+        run: sudo apt install cloc
+        
+      - name: Count Lines
+        run: pwd
+        
+        
+      
