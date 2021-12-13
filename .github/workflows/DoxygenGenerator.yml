@@ -15,6 +15,7 @@ jobs:
       - name: Create Doxygen
         uses: mattnotmitt/doxygen-action@v1
         with:
+            working-directory: 'Source/'
             doxyfile-path: 'docs/Doxyfile'
             
       - name: Push with New Doxygen Files
