@@ -14,3 +14,5 @@ TO-DO:
 3) Add some sort of runner
 
 4) Slack Notifications on whether staging branch was successfully pushed to main
+
+5) Doxygen
