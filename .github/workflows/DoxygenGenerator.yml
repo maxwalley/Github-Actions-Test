@@ -9,14 +9,17 @@ jobs:
   doxygen-generation:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+    
       - name: Create Doxygen
         uses: mattnotmitt/doxygen-action@v1
         with:
             doxyfile-path: 'docs/Doxyfile'
             
-      - name: Push with New Doxygen Files
-        uses: actions-js/push@master
-        with:
+      #- name: Push with New Doxygen Files
+       # uses: actions-js/push@master
+        #with:
           #Push with the same message
-          message: ${{ github.event.head_commit.message }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+         # message: ${{ github.event.head_commit.message }}
+          #github_token: ${{ secrets.GITHUB_TOKEN }}
