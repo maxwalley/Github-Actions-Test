@@ -16,10 +16,13 @@ jobs:
         with:
           fetch-depth: 0
       
+      - name: Change Working Directory
+        run: cd Source
+      
       - name: Lint Codebase
         uses: github/super-linter@v4
         env:
-          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_ALL_CODEBASE: true
           VALIDATE_CPP: true
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
