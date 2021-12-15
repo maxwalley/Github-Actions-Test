@@ -1,0 +1,51 @@
+name: Email Notifier
+
+#Ref: https://www.alanbonnici.com/2020/11/howto-send-email-from-google-from.html
+#Ref: https://arnaudr.io/2020/08/24/send-emails-from-your-terminal-with-msmtp/
+
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  email-notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install msmtp
+        run: |
+          apt-get update
+          apt-get -y install msmtp
+          
+      - name: Create Config File
+        run: |
+          cat << EOF > ~/.msmtprc
+          defaults
+          tls on
+          
+          account gmail
+          auth on
+          host smtp.gmail.com
+          port 587
+          user example
+          from example@gmail.com
+          password examplepass
+          
+          account default : gmail
+          EOF
+          
+          
+      - name: Create Message
+        run: |
+          cat << EOF > message.txt
+          To: max.walley1@btinternet.com
+          Subject: Test
+          
+          Test
+          EOF
+        
+      - name: Send Email
+        run: cat message.txt | msmtp \ --read-recipients
+        
+        
+
