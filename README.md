@@ -13,7 +13,7 @@ TO-DO:
 
 3) Add some sort of runner ❌
 
-4) Slack Notifications on whether staging branch was successfully pushed to main ❌
+4) Slack Notifications on whether staging branch was successfully pushed to main ✅ (Slack have disabled the webhook since it was publically accessible)
 
 5) Email Notifications ❌
 
