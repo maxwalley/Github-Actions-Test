@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Install curl
         run: |
-          apt-get update
-          apt-get -y install curl
+          sudo apt-get update
+          sudo apt-get -y install curl
     
       - name: Send Slack Notification
         run: |
