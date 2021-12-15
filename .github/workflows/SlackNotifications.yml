@@ -1,0 +1,19 @@
+name: Slack Notifier
+
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install curl
+        run: |
+          apt-get update
+          apt-get -y install curl
+    
+      - name: Send Slack Notification
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"A new version is available!"}' https://hooks.slack.com/services/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
