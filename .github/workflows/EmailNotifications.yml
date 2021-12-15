@@ -38,10 +38,10 @@ jobs:
       - name: Create Message
         run: |
           cat << EOF > message.txt
-          To: max.walley1@btinternet.com
-          Subject: Test
+          To: receivingemail@Whereever.com
+          Subject: New Commit Pushed
           
-          Test
+          This project just had a new commit pushed
           EOF
         
       - name: Send Email
