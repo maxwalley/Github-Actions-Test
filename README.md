@@ -15,4 +15,6 @@ TO-DO:
 
 4) Slack Notifications on whether staging branch was successfully pushed to main ❌
 
-5) Doxygen ✅
+5) Email Notifications ❌
+
+6) Doxygen ✅
